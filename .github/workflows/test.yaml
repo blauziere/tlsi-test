@@ -11,6 +11,7 @@ jobs:
         uses: actions/checkout@master
         with:
           repository: blauziere/tlsi-test
+          persist-credentials: false
           fetch-depth: 0
       - name: Modify a file
         run: |
