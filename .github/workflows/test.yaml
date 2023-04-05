@@ -18,4 +18,5 @@ jobs:
           ls
       - name: 'Commit and push changes'
         uses: actions-js/push@master
+        github_token: ${{ secrets.BEN_TLSI_TOKEN }}
   
