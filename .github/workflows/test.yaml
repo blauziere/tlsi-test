@@ -15,4 +15,7 @@ jobs:
       - name: Modify a file
         run: |
           date +%s > date.txt
+          ls
+      - name: 'Commit and push changes'
+        uses: actions-js/push@master
   
