@@ -20,5 +20,4 @@ jobs:
       - name: 'Commit and push changes'
         uses: actions-js/push@master
         with:
-          repository: blauziere/tlsi-test
-          github_token: ${{ secrets.BEN_TLSI_TOKEN }}
+          github_token: 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
