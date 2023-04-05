@@ -20,4 +20,3 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.BEN_TLSI_TOKEN }}
-  
