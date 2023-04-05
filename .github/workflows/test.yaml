@@ -1,1 +1,12 @@
-
+---
+name: Test Ben
+on:
+  workflow_dispatch:
+  
+jobs:
+  test-pull-ext-repo:
+  steps:
+    - uses: actions/checkout@v3
+    with:
+      repository: aubreyphan/Hotels
+      fetch-depth: 0
