@@ -4,10 +4,15 @@ on:
   workflow_dispatch:
   
 jobs:
-  test-pull-ext-repo:
+  pull-repo-ben:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: 'Checkout tlsi-test'
+        uses: actions/checkout@v3
         with:
-          repository: aubreyphan/Hotels
+          repository: blauziere/tlsi-test
           fetch-depth: 0
+      - name: Modify a file
+        run: |
+          date +%s > date.txt
+  
