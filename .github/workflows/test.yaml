@@ -18,8 +18,6 @@ jobs:
           date +%s > date.txt
           ls
       - name: 'Commit and push changes'
-        with:
-          github_token: ${{ secrets.BEN_TLSI_TOKEN }}
         env: 
           CI_COMMIT_MESSAGE: 'Test push Desjardins'
           CI_COMMIT_AUTHOR: 'Bob'
