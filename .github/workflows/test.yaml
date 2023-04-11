@@ -18,6 +18,14 @@ jobs:
           date +%s > date.txt
           ls
       - name: 'Commit and push changes'
-        uses: actions-js/push@master
         with:
           github_token: ${{ secrets.BEN_TLSI_TOKEN }}
+        env: 
+          CI_COMMIT_MESSAGE: 'Test push Desjardins'
+          CI_COMMIT_AUTHOR: 'Bob'
+          CI_COMMIT_EMAIL: 'benjamin.lauziere@desjardins.com'
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
+          git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git push https://${{ secrets.BEN_TLSI_TOKEN }}@github.com/blauziere/tlsi-test.git
